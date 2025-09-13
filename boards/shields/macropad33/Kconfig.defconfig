@@ -4,6 +4,6 @@
 if SHIELD_MACROPAD33
 
 config ZMK_KEYBOARD_NAME
-    default "Mcrpd33E"
+    default "macropad33"
 
 endif
