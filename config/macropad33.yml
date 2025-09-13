@@ -1,0 +1,9 @@
+file_format: "1"
+id: macropad33
+name: Mcrpd33E
+type: shield
+url: https://github.com/gtips/reviung/tree/master/reviung41
+requires: [nice_nano_v2]
+features:
+  - keys
+  - studio
