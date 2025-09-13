@@ -20,7 +20,7 @@
 // |  trans  |  trans  |  trans  |
 // |  trans  |  trans  |  trans  |                        
                 bindings = <
-                        &kp trans
+                        &trans
                         &trans  &trans  &trans
                         &trans  &trans  &trans
                         &trans  &trans  &trans
