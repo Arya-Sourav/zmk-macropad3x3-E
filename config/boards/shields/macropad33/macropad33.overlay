@@ -7,7 +7,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "macropad33_layout.dtsi"
 
-&gtips_reviung41_layout {
+&macropad33_layout0 {
     transform = <&default_transform>;
 };
 
