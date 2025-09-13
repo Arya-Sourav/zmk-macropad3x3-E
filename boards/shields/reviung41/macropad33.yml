@@ -2,7 +2,7 @@ file_format: "1"
 id: macropad33
 name: Mcrpd33E
 type: shield
-url: 
+url: https://github.com/Arya-Sourav/zmk-macropad3x3-E
 requires: [nice_nano_v2]
 features:
   - keys
