@@ -5,29 +5,73 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    behaviors {
+        Enc_RGB_speed: Enc_RGB_speed {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENC_RGB_SPEED";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_SPD>, <&rgb_ug RGB_SPI>;
 
-                default_layer {
-// --------------------------------
-// |  trans  |
-// |  trans  |  trans  |  trans  |
-// |  trans  |  trans  |  trans  |
-// |  trans  |  trans  |  trans  |                        
-                bindings = <
-                        &trans
-                        &trans  &trans  &trans
-                        &trans  &trans  &trans
-                        &trans  &trans  &trans
-                        >;
-                        
-                sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-                };
-
+            tap-ms = <3>;
         };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            // --------------------------------
+            // |  trans  |
+            // |  trans  |  trans  |  trans  |
+            // |  trans  |  trans  |  trans  |
+            // |  trans  |  trans  |  trans  |                        
+
+            bindings = <
+&kp C_MUTE
+            &to 1           &to 2           &to 3
+            &trans          &kp UP_ARROW    &trans
+            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        layer_1 {
+            bindings = <
+&trans
+        &to 0   &trans  &trans
+        &trans  &trans  &trans
+        &trans  &trans  &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        layer_2 {
+            bindings = <
+&trans
+        &to 0            &rgb_ug RGB_EFF  &rgb_ug RGB_TOG
+        &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI
+        &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        layer_3 {
+            bindings = <
+&trans
+        &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2
+        &trans          &bootloader   &trans
+        &bt BT_CLR_ALL  &to 0         &bt BT_CLR
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+    };
 };
