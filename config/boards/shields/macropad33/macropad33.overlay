@@ -11,7 +11,18 @@
     transform = <&default_transform>;
 };
 
+
+
 / {
+
+    chosen {
+      zmk,battery = &vbatt;
+    };
+
+    vbatt: vbatt {
+        compatible = "zmk,battery-nrf-vddh";
+    };    
+
     chosen {
         zmk,kscan = &kscan0;
         zmk,physical-layout = &macropad33_layout0;
