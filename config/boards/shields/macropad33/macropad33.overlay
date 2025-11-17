@@ -15,13 +15,13 @@
 
 / {
 
-    chosen {
-      zmk,battery = &vbatt;
-    };
+    // chosen {
+    //   zmk,battery = &vbatt;
+    // };
 
-    vbatt: vbatt {
-        compatible = "zmk,battery-nrf-vddh";
-    };    
+    // vbatt: vbatt {
+    //     compatible = "zmk,battery-nrf-vddh";
+    // };    
 
     chosen {
         zmk,kscan = &kscan0;
