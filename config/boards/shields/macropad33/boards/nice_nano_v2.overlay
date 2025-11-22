@@ -42,9 +42,9 @@
 &adc {
     status = "okay";
 
-    channel5: adc_channel_5 {
-        zephyr,adc-channel = <5>;         /* SAADC AIN5 */
-        reg = <5 0 0>;
+    // channel5: adc_channel_5 {
+    //     zephyr,adc-channel = <5>;         /* SAADC AIN5 */
+    //     reg = <5 0 0>;
         // zephyr,gain = "1/6";              /* 0.6V × 6 = 3.6V full-scale */
         // zephyr,reference = "internal";    /* 0.6V reference */
         // zephyr,acquisition-time = <40>;   /* standard */
