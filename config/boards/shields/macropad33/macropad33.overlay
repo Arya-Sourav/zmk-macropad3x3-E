@@ -76,7 +76,7 @@
         triggers-per-rotation = <20>;
     };
 
-     voltage_divider: vbatt {
+     vbatt: vbatt {
          status = "okay";
          compatible = "zmk,battery-voltage-divider";
          label = "Voltage Divider";
