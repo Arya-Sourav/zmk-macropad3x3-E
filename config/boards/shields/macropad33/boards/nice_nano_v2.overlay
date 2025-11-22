@@ -48,7 +48,7 @@
         // zephyr,gain = "1/6";              /* 0.6V × 6 = 3.6V full-scale */
         // zephyr,reference = "internal";    /* 0.6V reference */
         // zephyr,acquisition-time = <40>;   /* standard */
-    };
+    // };
 
 };
 
