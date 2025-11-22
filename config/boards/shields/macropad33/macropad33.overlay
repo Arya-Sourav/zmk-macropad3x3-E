@@ -15,9 +15,9 @@
 
 / {
 
-    // chosen {
-    //   zmk,battery = &vbatt;
-    // };
+    chosen {
+      zmk,battery = &vbatt;
+    };
 
     // vbatt: vbatt {
     //     compatible = "zmk,battery-nrf-vddh";
@@ -75,4 +75,14 @@
         sensors = <&left_encoder>;
         triggers-per-rotation = <20>;
     };
+
+     voltage_divider: vbatt {
+         status = "okay";
+         compatible = "zmk,battery-voltage-divider";
+         label = "Voltage Divider";
+         io-channels = <&adc 5>;
+         output-ohms = <1000000>;
+         full-ohms = <2000000>;
+     };
+    
 };
