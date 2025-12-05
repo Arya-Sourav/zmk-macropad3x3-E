@@ -54,13 +54,13 @@
         col-gpios
             = <&pro_micro 4 GPIO_ACTIVE_HIGH>
             , <&pro_micro 15 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 14 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 16 GPIO_ACTIVE_HIGH>
             , <&pro_micro 18 GPIO_ACTIVE_HIGH>
             ;
 
         row-gpios
             = <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
@@ -89,3 +89,10 @@
     //  };
     
 };
+
+R3 on 009 10
+C2 on 010 16
+R1 on 111 14
+C1 on 113 15
+C3 on 115 18
+R2 on 002 19
